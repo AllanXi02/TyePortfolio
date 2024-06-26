@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+#Final project  - transferr to Personal Portfolio(缺少, 项目图片, 以及对应的项目code 和介绍, 预计2~3个项目 一个3D - AI - RPC 就够了 - 在家一个酷炫的网站就行. 只用header 做个基本的 maybe 也可以??)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
