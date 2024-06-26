@@ -1,0 +1,230 @@
+.header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "header__logo header__title header__title"
+    "link link button"
+  ;
+  font-family: cursive;
+  align-items: center;
+  padding: 1rem;
+  background-color: wheat;
+}
+
+.header__logo {
+  grid-area: header__logo;
+  width: 4rem;
+  height: 4rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.header__title {
+  grid-area: header__title;
+  font-size: 2rem;
+  margin: 0;
+  justify-self: center;
+  text-align: center;
+  color: saddlebrown;
+}
+
+.header__button {
+  grid-area: button;
+  justify-self: start;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  background-color: #6c757d;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.header__button:hover {
+  background-color: #495057;
+}
+
+.global-nav {
+  /* grid-column: 1 / -1; */
+  grid-area: link;
+}
+
+.global-nav__ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  background-color: wheat;
+}
+
+.global-nav__ul_open {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.global-nav__item {
+  margin-bottom: 0.5rem;
+}
+
+.global-nav__link {
+  font-size: 1.3rem;
+  color: saddlebrown;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.global-nav__link:hover {
+  color: #fff;
+  background-color: saddlebrown;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+}
+
+@media (min-width: 44rem) {
+  .header {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .header__title {
+    grid-column: 2 / -2;
+  }
+
+  .header__button {
+    display: none;
+  }
+
+  .global-nav {
+    grid-column: 3 / -1;
+  }
+
+}
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: papayawhip;
+  border: 1px solid burlywood;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+li:hover .dropdown {
+  display: block;
+}
+
+.dropdown li {
+  padding: 0.5rem;
+}
+
+.dropdown a {
+  display: block;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown a:hover {
+  background-color: burlywood;
+}
+
+
+/* Dark mode CSS styles */
+.dark .header {
+  background-color: #333;
+  font-weight: bolder;
+}
+
+.dark .header__title {
+  color: #ccc;
+  
+}
+
+.dark .header__button {
+  background-color: #555;
+  color: #ccc;
+}
+
+.dark .header__button:hover {
+  background-color: #777;
+}
+
+.dark .global-nav__ul {
+  background-color: #333;
+}
+
+.dark .global-nav__link {
+  color: #ccc;
+}
+
+.dark .global-nav__link:hover {
+  color: #333;
+  background-color: #ccc;
+}
+
+.header__theme-button {
+  background-color: antiquewhite;
+  border-radius: 20px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  font-family: "Lucida Handwriting", cursive;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  }
+  
+  
+.skiplink {
+  position: absolute;
+  top: -50px;
+  left: 300px;
+  padding: 0.5rem;
+  background: burlywood;
+  color: #eeeeee;
+  border: solid papayawhip 1px;
+
+}
+
+.global-nav__item {
+  position: relative;
+}
+
+
+
+.dark .header__theme-button {
+  background-color: slategrey;  
+  border-radius: 20px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  font-family: "Lucida Handwriting", cursive;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  color: white;
+}
+
+/* Add dark mode styles for .dropdown */
+.dark .dropdown {
+  background-color: #444; /* Change the background color for dark mode */
+  border: 1px solid #555; /* Change the border color for dark mode */
+}
+
+.dark li:hover .dropdown {
+  display: block;
+}
+
+.dark .dropdown li {
+  padding: 0.5rem;
+  /* Add other dark mode styles for .dropdown li here */
+}
+
+.dark .dropdown a {
+  display: block;
+  color: #ccc; /* Change the text color for dark mode */
+  text-decoration: none;
+}
+
+.dark .dropdown a:hover {
+  background-color: #666; /* Change the background color on hover for dark mode */
+}

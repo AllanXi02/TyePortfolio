@@ -1,0 +1,57 @@
+/* Light mode CSS */
+.about1 {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: blanchedalmond;
+  font-family: "Lucida Handwriting", cursive;
+  }
+  
+  .about1__item-content {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: burlywood;
+  }
+  
+  .about1__item-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: burlywood;
+  color: burlywood;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  }
+  
+  .about1__item-title:hover {
+  background-color: #ddd;
+  }
+  
+  /* Dark mode CSS */
+  .dark .about1 {
+    background-color: #333;
+  }
+  
+  .dark .about1__item-content {
+  color: #ccc;
+font-size: larger;
+font-weight: bolder; 
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ }
+  
+  .dark .about1__item-title {
+  background-color: #555;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #ccc;
+  }
+  
+  .dark .about1__item-title:hover {
+  background-color: #777;
+  }
+  
+  .dark h2{
+    color: blanchedalmond;
+    font-size: larger;
+    }

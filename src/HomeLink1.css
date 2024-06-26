@@ -1,0 +1,44 @@
+.home__tabs {
+  display: flex;
+}
+h2{
+  font-family: "Lucida Handwriting", cursive;
+}
+.home__tab {
+  padding: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.home__tab.active {
+  border-bottom: 3px solid #000;
+}
+
+.home__tab:hover {
+  color: #000;
+}
+
+.homelink1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.homelink1 .home__image {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.homelink1 .home__description {
+  text-align: center;
+  font-size: 2rem;
+  line-height: 1.5;
+  color: #666;
+}

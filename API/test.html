@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vertical Motion Simulation</title>
+</head>
+<body>
+    <canvas id="simulationCanvas" width="800" height="600"></canvas>
+    <script>
+        const canvas = document.getElementById('simulationCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // Simulation parameters
+        let time = 0;
+        const timeStep = 0.1; // In seconds
+        const initialVelocity = 40; // m/s
+        const initialHeight = 80; // meters
+        const g = 9.8; // m/s^2
+        const buildingHeight = 100; // Building height in meters for visualization
+
+        // Convert meters to pixels (for example, 1 meter = 5 pixels)
+        const scale = 5;
+
+        // Function to calculate height at a given time
+        function calculateHeight(t) {
+            return initialHeight + (initialVelocity * t) - (0.5 * g * t * t);
+        }
+
+        // Function to draw the building
+        function drawBuilding() {
+            ctx.fillStyle = '#8B4513'; // Brown color
+            ctx.fillRect(100, canvas.height - buildingHeight * scale, 50, buildingHeight * scale);
+        }
+
+        // Function to draw the person
+        function drawPerson() {
+            ctx.beginPath();
+            ctx.arc(125, canvas.height - buildingHeight * scale, 10, 0, Math.PI * 2); // Head
+            ctx.fillStyle = 'blue';
+            ctx.fill();
+        }
+
+        // Animation function
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas
+
+            drawBuilding(); // Draw the building
+            drawPerson(); // Draw the person
+
+            // Calculate the current height
+            let height = calculateHeight(time);
+
+            if (height > 0) {
+                // Draw the object
+                ctx.beginPath();
+                ctx.arc(125, canvas.height - (buildingHeight * scale + height * scale), 10, 0, Math.PI * 2);
+                ctx.fillStyle = 'red';
+                ctx.fill();
+
+                // Increment time
+                time += timeStep;
+
+                // Request next frame
+                requestAnimationFrame(animate);
+            }
+        }
+
+        // Start animation
+        animate();
+    </script>
+</body>
+</html>

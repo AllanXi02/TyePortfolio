@@ -1,0 +1,90 @@
+/* Light  -  CSS */
+.footer-ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  background-color: wheat;
+}
+
+.footer-nav0 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-bottom: 0rem;
+  color: #000;
+}
+
+.footer-ul1 {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  background-color: wheat;
+}
+
+.footer-nav__address0{
+  color: palevioletred;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.footer-nav__address,
+.footer-nav__address1 {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+   color:#872243;
+}
+
+.footer-nav__address {
+  border-right: 1px solid;
+  font-size: 1rem;}
+
+.footer-nav__li {
+  margin-bottom: 2rem;
+}
+
+.footer-nav__li:hover,
+.footer-nav__li1:hover {
+  background-color: dodgerblue;
+  color: black;
+}
+
+.footer {
+  display: grid;
+  background-color: wheat;
+  margin-top: 1rem;
+}
+
+.footer-nav__address0,
+.footer-nav__address,
+.footer-nav__address1 {
+  text-decoration: none;
+}
+/* Dark mode CSS styles for Footer */
+.dark .footer-ul,
+.dark .footer-ul1 {
+  background-color: #333;
+}
+
+/* leave the rose as pink */
+.dark .footer-nav__address,
+.dark .footer-nav__address1 {
+  color: #ccc;
+}
+
+.dark .footer-nav__address {
+  border-color: #ccc;
+}
+
+.dark .footer-nav__li:hover,
+.dark .footer-nav__li1:hover {
+  background-color: #555;
+  color: #ccc;
+}
+
+.dark .footer {
+  background-color: #333;
+}

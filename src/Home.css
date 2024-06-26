@@ -1,0 +1,50 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #fce3c5;
+  border: 2px solid saddlebrown;
+  margin-top: 1rem;
+}
+
+.home__title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.home__content {
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.home__image {
+  width: 100%;
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 25%;
+  margin-right: 2rem;
+  float: left;
+   /* let it floeat */
+}
+
+.home__description {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.home::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Dark mode CSS styles for Home */
+.dark .home {
+  background-color: #333;
+  border-color: #555;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: aliceblue;
+}

@@ -1,0 +1,118 @@
+/* Light mode CSS */
+.roses {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+  margin: 0 auto;
+  max-width: 960px;
+  background-color: antiquewhite;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.main {
+  background-color: bisque;
+}
+
+.rose {
+  grid-column: span 12;
+  border: 1rem solid beige;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.rose:hover {
+  transform: translateY(-5px) translateX(-5px) translateZ(-51px);
+}
+
+.rose img {
+  width: 30%;
+  height: auto;
+  object-fit: cover;
+}
+
+ 
+
+.rose p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #666;
+}
+
+.roses-link {
+  color: black;
+  text-decoration: none;
+  font-family: cursive;
+}
+
+@media (min-width: 40rem) {
+  .Cats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 44rem) {
+  .Cats {
+    gap: 2rem;
+  }
+
+  .rose {
+    grid-column: span 4;
+    grid-row: span 3;
+    padding: 2rem;
+    text-align: left;
+  }
+
+  .rose h2 {
+    margin-top: 0;
+  }
+
+  .rose p {
+    margin-bottom: 1.5rem;
+  }
+
+  .rose img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Dark mode CSS styles for Roses */
+.dark .rose {
+  /* rgba(233, 209, 179, 0.937) */
+  background-color: gainsboro;
+  border-color: gray;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.dark .roses {
+  background-color: gainsboro;
+
+}
+
+.dark .roses-link {
+   text-decoration: none;
+  font-family: "Lucida Handwriting", cursive;
+}
+
+.dark .rose h2 {
+  color: #ccc;
+}
+
+.dark .rose p {
+  color: #aaa;
+}
+
+.dark .main {
+  background-color: #444;
+}
